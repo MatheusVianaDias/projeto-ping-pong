@@ -14,6 +14,8 @@ let raqueteAltura = 150;
 let xRaquete = 5;
 let yRaquete = 190;
 
+let colidiu = false;
+
 function setup() {
     createCanvas(800, 500);
 }
@@ -26,6 +28,7 @@ function draw() {
     mostraRaquete();
     movimentaMinhaRaquete();
     verificaColosaoRaquete();
+    colisaoMinhaRaqueteBiblioteca();
 
 }
 
