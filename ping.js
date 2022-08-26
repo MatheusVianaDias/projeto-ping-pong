@@ -63,8 +63,16 @@ function movimentaMinhaRaquete() {
     }
 }
 
-function verificaColosaoRaquete(){
-    if (xBolinha - raio < xRaquete + raqueteComprimento && yBolinha - raio < yRaquete + raqueteAltura && yBolinha + raio > yRaquete ){
+function verificaColosaoRaquete() {
+    if (xBolinha - raio < xRaquete + raqueteComprimento && yBolinha - raio < yRaquete + raqueteAltura && yBolinha + raio > yRaquete) {
         velocidadeXBolinha *= -1;
     }
+}
+
+function colisaoMinhaRaqueteBiblioteca() {
+    colidiu =
+        collideReactCircle(xRaquete, yRaquete, raqueteComprimento, raqueteAltura, xBolinha, yBolinha, raio);
+        if (colidiu){
+            velocidadeXBolinha *= -1;
+        }
 }
